@@ -1,0 +1,54 @@
+
+<div *ngIf="journal">
+    <h2><span>Journal</span> {{journal.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Date Added</span></dt>
+        <dd>
+            <span>{{journal.dateAdded | date:'medium'}}</span>
+        </dd>
+        <dt><span>Project</span></dt>
+        <dd>
+            <span>{{journal.project}}</span>
+        </dd>
+        <dt><span>File Directory</span></dt>
+        <dd>
+            <span>{{journal.fileDirectory}}</span>
+        </dd>
+        <dt><span>Machine</span></dt>
+        <dd>
+            <span>{{journal.machine}}</span>
+        </dd>
+        <dt><span>Technology</span></dt>
+        <dd>
+            <span>{{journal.technology}}</span>
+        </dd>
+        <dt><span>Version</span></dt>
+        <dd>
+            <span>{{journal.version}}</span>
+        </dd>
+        <dt><span>Comments</span></dt>
+        <dd>
+            <span>{{journal.comments}}</span>
+        </dd>
+        <dt><span>Is Active</span></dt>
+        <dd>
+            <span>{{journal.isActive}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'journal/'+ journal.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,12 @@
+entity  Journal {
+  id Long,
+  dateAdded ZonedDateTime,
+  project String,
+  fileDirectory String,
+  machine String,
+  technology String,
+  version String,
+  comments String,
+  isActive Boolean
+}
+paginate Journal with pagination

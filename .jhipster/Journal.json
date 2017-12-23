@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "dateAdded",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "project",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fileDirectory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "machine",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "technology",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "version",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "comments",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isActive",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20171223174806",
+    "entityTableName": "journal",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
