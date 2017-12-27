@@ -31,7 +31,7 @@
             <tbody>
             <tr *ngFor="let journal of journals ;trackBy: trackId">
                 <td><a [routerLink]="['../journal', journal.id ]">{{journal.id}}</a></td>
-                <td>{{journal.dateAdded | date:'medium'}}</td>
+                <td>{{journal.dateAdded | date: 'MM-dd-yyyy'}}</td>
                 <td>{{journal.project}}</td>
                 <td>{{journal.fileDirectory}}</td>
                 <td>{{journal.machine}}</td>
